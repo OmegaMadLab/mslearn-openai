@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 
 # Add Azure OpenAI package
 
-
 def main(): 
         
     try: 
@@ -21,6 +20,8 @@ def main():
         
         # Add code to build request...
         
+            
+        print("Summary: " + response.choices[0].message.content + "\n")
 
     except Exception as ex:
         print(ex)
