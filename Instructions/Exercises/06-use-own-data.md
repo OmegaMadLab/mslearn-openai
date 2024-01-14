@@ -17,7 +17,17 @@ If you don't already have one, provision an Azure OpenAI resource in your Azure 
 2. Create an **Azure OpenAI** resource with the following settings:
     - **Subscription**: *Select an Azure subscription that has been approved for access to the Azure OpenAI service*
     - **Resource group**: *Choose or create a resource group*
-    - **Region**: *Make a **random** choice from any of the available regions*\*
+    - **Region**: *Make a **random** choice from any of the following regions*\*:
+        - Australia East
+        - Canada East
+        - East US
+        - East US 2
+        - France Central
+        - Japan East
+        - North Central US
+        - Sweden Central
+        - Switzerland North
+        - UK South
     - **Name**: *A unique name of your choice*
     - **Pricing tier**: Standard S0
 
@@ -31,7 +41,7 @@ Azure OpenAI provides a web-based portal named **Azure OpenAI Studio**, that you
 
 1. On the **Overview** page for your Azure OpenAI resource, use the **Go to Azure OpenAI Studio** button to open Azure OpenAI Studio in a new browser tab.
 2. In Azure OpenAI Studio, on the **Deployments** page, view your existing model deployments. If you don't already have one, create a new deployment of the **gpt-35-turbo-16k** model with the following settings:
-    - **Model**: gpt-35-turbo-16k
+    - **Model**: gpt-35-turbo-16k *(must be this model to to use the features in this exercise)*
     - **Model version**: Auto-update to default
     - **Deployment name**: *A unique name of your choice*
     - **Advanced options**
@@ -70,7 +80,7 @@ Bow you'll add some data for a fictional travel agent company named *Margie's Tr
 1. In a new browser tab, download an archive of brochure data from `https://aka.ms/own-data-brochures`. Extract the brochures to a folder on your PC.
 1. In Azure OpenAI Studio, in the **Chat** playground, in the **Assistant setup** section, select **Add your data**.
 1. Select **Add a data source** and choose **Upload files**.
-1. You'll need to create a storage account and Azure Cognitive Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
+1. You'll need to create a storage account and Azure AI Search resource. Under the dropdown for the storage resource, select **Create a new Azure Blob storage resource**, and create a storage account with the following settings. Anything not specified leave as the default.
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the same resource group as your Azure OpenAI resource*
@@ -78,7 +88,7 @@ Bow you'll add some data for a fictional travel agent company named *Margie's Tr
     - **Region**: *Select the same region as your Azure OpenAI resource*
     - **Redundancy**: Locally-redundant storage (LRS)
 
-1. While the storage account resource is being created, return to Azure OpenAI Studio and select **Create a new Azure Cognitive Search resource** with the following settings. Anything not specified leave as the default.
+1. While the storage account resource is being created, return to Azure OpenAI Studio and select **Create a new Azure AI Search resource** with the following settings. Anything not specified leave as the default.
 
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *Select the same resource group as your Azure OpenAI resource*
@@ -93,10 +103,10 @@ Bow you'll add some data for a fictional travel agent company named *Margie's Tr
     - **Subscription**: Your Azure subscription
     - **Select Azure Blob storage resource**: *Use the **Refresh** button to repopulate the list, and then choose the storage resource you created*
         - Turn on CORS when prompted
-    - **Select Azure Cognitive Search resource**: *Use the **Refresh** button to repopulate the list, and then choose the search resource you created*
+    - **Select Azure AI Search resource**: *Use the **Refresh** button to repopulate the list, and then choose the search resource you created*
     - **Enter the index name**: `margiestravel`
     - **Add vector search to this search resource**: unchecked
-    - **I acknowledge that connecting to an Azure Cognitive Search account will incur usage to my account** : checked
+    - **I acknowledge that connecting to an Azure AI Search account will incur usage to my account** : checked
 
 1. On the **Upload files** page, upload the PDFs you downloaded, and then select **Next**.
 1. On the **Data management** page select the **Keyword** search type from the drop-down, and then select **Next**.
